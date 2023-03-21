@@ -88,10 +88,18 @@ const loginUsuarios = async (req, res) => {
 
 };
 
-const revalidarToken = (req, res) => {
+const revalidarToken = async (req, res) => {
+
+  const uid = req.uid
+  const name = req.name
+
+  //Generar JWT
+  const token = await generarJWT(uid,name)
+
+
   res.json({
     ok: true,
-    msg: "renew",
+    token
   });
 };
 
