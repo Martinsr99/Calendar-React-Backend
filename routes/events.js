@@ -1,4 +1,4 @@
-const { getEventos, crearEvento, actualizarEventos, eliminarEventos } = require("../controllers/events")
+const { getEventos, crearEvento, actualizarEvento, eliminarEvento } = require("../controllers/events")
 
 /* 
     Event Routes
@@ -27,9 +27,9 @@ router.post('/', [
 ],crearEvento)
 
 // Obtener eventos
-router.put('/:id',actualizarEventos)
+router.put('/:id',actualizarEvento)
 
 // Obtener eventos
-router.delete('/:id',eliminarEventos)
+router.delete('/:id',eliminarEvento)
 
 module.exports = router
